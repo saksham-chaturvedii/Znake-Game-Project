@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a simple old-school CLI-based snake game written in C++. As evident as it might be, the snake's name is "Znake".\
+This is a simple old-school CLI-based snake game. As evident as it might be, the snake's name is "Znake".\
 I worked on it as a personal project to:
 * Have fun!
 * Learn something new in C++.
