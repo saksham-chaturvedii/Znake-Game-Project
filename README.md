@@ -24,6 +24,8 @@ The code is properly commented and I hope you don't face any difficulty in under
 * **k** or **K** = 🔽
 * **l** or **L** = ▶ <br/>
 
+Press **x** or **X** to stop the game.
+
 You only need to press the key once to move the znake in the respective direction.
 
 ### PLAY THE GAME:
