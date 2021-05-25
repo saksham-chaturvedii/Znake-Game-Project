@@ -1,10 +1,8 @@
-//snakes should not eat fruits as they are carnivores and their digestive system isn't meant for fruits xD
-//put opposite control as to a s d w != left down right up; increase the difficulty
 #include<iostream>
-#include<time.h> //for srand
-#include<stdlib.h> //for system("cls")
-#include<conio.h> //for _kbhit, _getch
-#include<windows.h> //for sleep
+#include<time.h> //For srand()
+#include<stdlib.h> //For system("cls")
+#include<conio.h> //For _kbhit, _getch
+#include<windows.h> //For sleep()
 using namespace std;
 
 
@@ -41,36 +39,35 @@ void Initialize() //Function to initialize the game (default values and stuff)
     target_y = rand() % height ; //This will generate y-coordinate for the target randomly with limit [0-height)
 
     score = 0; //Initially, the player's score will be = 0
-
 }
 
 void console_draw() //Function to print the console screen, snake and target
 {
     system("cls"); //To clear the console screen and prevent it from flickering
-
     cout<<"\t\n\t\t  ZzzNAKE GAME!\n";
+    
     //Game screen borders
     cout<<"  "; //2 spaces
-    for(int i=1; i<width; i++) //top
+    for(int i=1; i<width; i++) //Top
         cout<<"_";
     cout<<"\n";
 
-    for(int i=0; i<height; i++) //left & right //y-axis
+    for(int i=0; i<height; i++) //Left & Right //y-axis
     {
         for(int j=0; j<width; j++) //x-axis
         {
-            if(j==1) //left wall
+            if(j==1) //Left Wall
                 cout<<"|";
 
             if(i == y  && j == x)
-                cout<<"Z"; //print the snake's head
+                cout<<"Z"; //Print the snake's head
 
             else if(i == target_y && j == target_x )
-                cout<<"T"; //print the target
+                cout<<"T"; //Print the target
 
             else //Print Snake's tail
             {
-                bool print = false; //Boolean variable to keep track whether to print space or Snake's tail b/e the left and right walls
+                bool print = false; //Boolean variable to keep track whether to print space or Snake's tail between the left & right walls
                 for(int k=0; k<tail_size; k++)
                 {
                     if(tail_x[k] == j && tail_y[k] == i)
@@ -83,14 +80,14 @@ void console_draw() //Function to print the console screen, snake and target
                     cout<<" ";
             }
 
-            if(j == width-1) //right wall
+            if(j == width-1) //Right Wall
                 cout<<"|";
         }
         cout<<"\n";
     }
 
     cout<<"  ";// 2 spaces
-    for(int i=1; i<width; i++) //bottom
+    for(int i=1; i<width; i++) //Bottom
         cout<<"_";
     cout<<"\n"<<"\n";
     cout<<"\t\t    SCORE: "<<score<<endl;
@@ -172,25 +169,18 @@ void logix() //Function to move the snake according to the direction & keep crea
             break;
 
         case Up:
-            //Sleep(15); //to balance the irregularity in speed of snake's movement in the upwards & downwards direction
-            y--; //not y++ because our j & y index are starting from 0 and not from the last index i.e. height-1
+            y--; //Not y++ because our j & y index are starting from 0 and not from the last index i.e. height-1
             break;
 
         case Down:
-//            Sleep(15);
-            y++; //not y-- because our j & y index are starting from 0 and not from the last index i.e. height-1
+            y++; //Not y-- because our j & y index are starting from 0 and not from the last index i.e. height-1
             break;
 
-        default: //wrong input (neither 'x' nor 'AWSD')
+        default: //Wrong input (neither 'x' nor 'IJKL')
             break;
     }
 
-    /*
-    if(x>width || x<0 || y>height || y<0) //Exit if Snake hits the wall
-        exit_key = true;
-    */
-
-    //To pass through the wall & decrease the difficulty level
+    
     if(x>=width)
         x=1;
     else if(x<=0)
@@ -202,7 +192,7 @@ void logix() //Function to move the snake according to the direction & keep crea
 
     for(int i=0; i<tail_size; i++)
     {
-        if(tail_x[i] == x  && tail_y[i] == y) //If Snake's bites its own tail then end the game
+        if(tail_x[i] == x  && tail_y[i] == y) //If Snake bites its own tail then end the game
         {
             for(int temp1=0; temp1 <= width/2; temp1++)
             {
