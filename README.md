@@ -39,7 +39,7 @@ Snakes cannot digest fruits, they are strict carnivores. Hence, the reason why I
 #### MidGame:
 ![midgame](https://user-images.githubusercontent.com/81289215/119557186-7e474280-bdbd-11eb-860a-72cb493e4a19.png)
 
-#### Endgame:
+#### EndGame:
 ![image](https://user-images.githubusercontent.com/81289215/119557252-9028e580-bdbd-11eb-92bc-59846f043b1a.png)
 
 
