@@ -7,7 +7,6 @@ I worked on it as a personal project to:
 * Have fun!
 * Learn something new in C++.
 
-Gameplay video link: link\
 The code is properly commented and I hope you don't face any difficulty in understanding what's going on.
 
 ---
@@ -33,7 +32,17 @@ You only need to press the key once to move the znake in the respective directio
 * Run it on your C++ IDE.
 
 ### FUN FACT 📝:
-Snakes cannot digest fruits, they are strict carnivores. Hence, the reason why I did not take our target 'T' in the game as a fruit😆.
+Snakes cannot digest fruits, they are strict carnivores. Hence, the reason why I did not take our target 'T' in the game as a fruit 😆.
+
+### SCREENSHOTS:
+
+#### MidGame:
+![midgame](https://user-images.githubusercontent.com/81289215/119557186-7e474280-bdbd-11eb-860a-72cb493e4a19.png)
+
+#### Endgame:
+![image](https://user-images.githubusercontent.com/81289215/119557252-9028e580-bdbd-11eb-92bc-59846f043b1a.png)
+
+
 
 
 
